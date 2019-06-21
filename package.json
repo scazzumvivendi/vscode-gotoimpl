@@ -1,0 +1,53 @@
+{
+	"name": "gotoimpl",
+	"displayName": "GoToImpl",
+	"description": "Adds go to implementation on context menu",
+	"version": "0.1.0",
+	"publisher": "thewritingdude",
+	"engines": {
+		"vscode": "^1.22.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.goToImpl"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.goToImpl",
+				"title": "Go to implementation"
+			}
+		],
+		"menus": {
+			"editor/context": [
+				{
+					"command": "extension.goToImpl",
+					"group": "navigation@99",
+					"when": "editorHasImplementationProvider"
+				}
+			]
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install",
+		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+	},
+	"devDependencies": {
+		"typescript": "^2.6.1",
+		"vscode": "^1.1.6",
+		"tslint": "^5.8.0",
+		"@types/node": "^7.0.43",
+		"@types/mocha": "^2.2.42"
+	},
+	"__metadata": {
+		"id": "30a3b014-e4fd-4bfc-bb3e-2a92c2ad9d27",
+		"publisherId": "24307835-eed2-42fe-916b-af03120cc3f5",
+		"publisherDisplayName": "thewritingdude"
+	}
+}
