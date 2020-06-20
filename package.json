@@ -2,10 +2,10 @@
 	"name": "gotoimpl",
 	"displayName": "GoToImpl",
 	"description": "Adds go to implementation on context menu",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"publisher": "thewritingdude",
 	"engines": {
-		"vscode": "^1.22.0"
+		"vscode": "^1.34.0"
 	},
 	"categories": [
 		"Other"
@@ -34,13 +34,11 @@
 	"scripts": {
 		"vscode:prepublish": "npm run compile",
 		"compile": "tsc -p ./",
-		"watch": "tsc -watch -p ./",
-		"postinstall": "node ./node_modules/vscode/bin/install",
-		"test": "npm run compile && node ./node_modules/vscode/bin/test"
+		"watch": "tsc -watch -p ./"
 	},
 	"devDependencies": {
 		"typescript": "^2.6.1",
-		"vscode": "^1.1.6",
+		"@types/vscode": "^1.1.6",
 		"tslint": "^5.8.0",
 		"@types/node": "^7.0.43",
 		"@types/mocha": "^2.2.42"
@@ -49,5 +47,8 @@
 		"id": "30a3b014-e4fd-4bfc-bb3e-2a92c2ad9d27",
 		"publisherId": "24307835-eed2-42fe-916b-af03120cc3f5",
 		"publisherDisplayName": "thewritingdude"
+	},
+	"repository": {
+		"url": "https://github.com/thewritingdude/vscode-gotoimpl"
 	}
 }
